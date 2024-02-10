@@ -12,11 +12,11 @@ from agents.temperature_query.temperature_query import agent as query_agent
 query_location = input("Enter the location for temperature query: ")
 query_min_temperature = float(input("Enter the minimum acceptable temperature: "))
 query_max_temperature = float(input("Enter the maximum acceptable temperature: "))
-query_period = float(3600)
+# query_period = float(3600)
 
 
 # Define an interval handler for sending periodic temperature queries
-@query_agent.on_interval(period=query_period, messages=QueryUserRequest)
+@query_agent.on_interval(period=3, messages=QueryUserRequest)
 async def handle_interval(ctx: Context):
     # Send a QueryUserRequest to query the temperature in specified location with specified temperature thresholds
     await ctx.send(query_agent.address, QueryUserRequest(location=query_location, min_temperature=query_min_temperature,

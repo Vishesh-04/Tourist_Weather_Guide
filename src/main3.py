@@ -17,27 +17,19 @@ TEXT_COLOR = "#EAECEE"
 
 FONT = "Helvetica 14"
 FONT_BOLD = "Helvetica 13 bold"
+count =0;
 
 # Send function
 def send():
-	send = "You -> " + e.get()
-	txt.insert(END, "\n" + send)
-	user = e.get().lower()
-	e.get().clear()
-	txt.insert(END, "\n" + "Bot -> Enter Your Native location for temperature query:")
-	send = "You -> " + e.get()
-	txt.insert(END, "\n" + send)
-	query_location = e.get()
-	print(query_location)
-	txt.insert(END, "\n" + "Bot -> Enter Destination location for temperature query:")
-	send = "You -> " + e.get()
-	txt.insert(END, "\n" + send)
-	query_location = e.get()
-	print(query_location)
+	if(count ==0):
+		send = "You -> " + e.get()
+		txt.insert(END, "\n" + send)
+		user = e.get().lower()
+		count++;
 
 
 
-# query_location = input("Enter Your location for temperature query: ")
+	# query_location = input("Enter Your location for temperature query: ")
 # query_location1 = input("Enter the Destination location for temperature query: ")
 
 
@@ -62,6 +54,7 @@ txt.insert(END, "\n" + "Bot -> Hi there, how can I help?")
 
 send = Button(root, text="Send", font=FONT_BOLD, bg=BG_GRAY,
 			command=send).grid(row=2, column=1)
-
+txt.insert(END, "\n" + "Bot -> Enter Your location for temperature query: ")
+query_location = e.get()
 
 root.mainloop()
