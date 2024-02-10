@@ -1,0 +1,7 @@
+src/.env
+
+src/agents/temperature_query/__pycache__/__init__.cpython-311.pyc
+src/utils/__pycache__/weather_api.cpython-311.pyc
+src/messages/__pycache__/query_messages.cpython-311.pyc
+src/messages/__pycache__/__init__.cpython-311.pyc
+src/agents/temperature_query/__pycache__/temperature_query.cpython-311.pyc
