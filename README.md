@@ -1,8 +1,13 @@
-# UAgents-weather
+# Tourist temperature Guide
 
 ## Project Description
 
-The TemperatureX Web Application is a Flask-based Temperature Alert Agent built using Fetch.AI's uAgent library that provides a simple interface for users to input their desired location and temperature range and then displays real-time temperature status updates on the webpage, i.e., sends alert/notification to the user when the current temperature in their chosen location goes below the minimum or above the maximum threshold they've set. 
+The Tourist temperature Guide is a Temperature Alert Agent built using Fetch.AI's uAgent library that provides a simple interface for users to input their desired location and temperature range and then displays real-time temperature status updates on the webpage, i.e., sends alert/notification to the user whether the current temperature is suitable for their living conditions or not.
+
+![Tourist temperature Guide](SS.png)
+
+## Project Implementation Video
+[Project Demo Video Link](https://drive.google.com/file/d/1ELTCTic9KCpHiCOOLqHhqHKSecFM1GK6/view?usp=drive_link)
 
 ## How to Run the Project
 
@@ -47,12 +52,8 @@ Open New Terminal,
    poetry install
    ```
 
-### Step 5: Navigate to shell
-```bash
-   poetry shell
-   ```
 
-### Step 6: Run the main script
+### Step 5: Run the main script
 To run the project and its agents:
 
 ```bash

@@ -21,10 +21,10 @@ async def handle_query_request(ctx: Context, sender: str, msg: QueryUserRequest)
     if api_status is True:
         
         # Determine the temperature status based on the received data
-        if api_temp <= msg.min_temperature:
+        if api_temp < msg.min_temperature:
             status = TemperatureStatus.COLD
             
-        elif api_temp >= msg.max_temperature:
+        elif api_temp > msg.max_temperature:
             status = TemperatureStatus.HOT
             
         else:
